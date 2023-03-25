@@ -40,6 +40,10 @@ flask run
 http://localhost:5000
 http://127.0.0.1:5000
 ```
+
+* Note *: If port 5000 is already in use, you can free the port by running fuser -k port/tcp command in the terminal.
+Also, to quit or stop the server, press Ctrl+C because Ctrl+Z sends the process to the background.
+
 ## Features
 - User registration and authentication
 - User profile creation and editing
