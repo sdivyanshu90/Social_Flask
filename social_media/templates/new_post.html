@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Food Stock: New Post</title>
+{% endblock %}
+
+{% block body%}
+<div>
+	<h1>New Post<h1>
+</div>
+
+<div class="form">
+	<form action='/create_post/{{id}}/{{password}}' method='POST'>
+		<label>Title</label>
+		<br>
+		<input type="text" name="title", id="title">
+
+		<br>
+		<br>
+
+		<label>Content</label>
+		<br>
+		<input type="text" name="content", id="content">
+
+		<br>
+		<br>
+		<br>
+
+		<input type="submit" value='Create Post' id="createpost">
+	</form>
+
+	<form action='/home/{{id}}/{{password}}'>
+		<input type="submit" value="Cancel" id="cancelpost">
+	</form>
+	
+	<br>
+</div>
+
+{% endblock %}

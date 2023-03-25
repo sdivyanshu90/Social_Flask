@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>FoodStock: {{post.title}}</title>
+{% endblock %}
+
+
+{% block body %}
+	<div class="post_info">
+		<h1> {{post.title}} by {{post.creator}} </h1>
+
+		<br>
+
+		<p> {{post.content}} </p>
+
+		<br>
+		<br>
+
+		<form action="/view_post/{{ user_id }}/{{ password }}/{{ post.id }}" method="POST">
+			<input type="submit" value="Back" name="back">
+		</form>
+	</div>
+{% endblock %}

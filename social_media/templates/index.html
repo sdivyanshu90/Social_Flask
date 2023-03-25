@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Food Stock: Home</title>
+{% endblock %}
+
+{% block body%}
+<div>
+	<h1>Login Page<h1>
+</div>
+
+<div class="info">
+	<form action='/' method='POST'>
+		<label>Email</label>
+		<br>
+		<input type="text" name="email" id="email">
+
+		<br>
+		<br>
+
+		<label>Username</label>
+		<br>
+		<input type="text" name="username", id="username">
+
+		<br>
+		<br>
+
+		<label>Password</label>
+		<br>
+		<input type="text" name="password", id="password">
+		<input type="submit" value='Log In' id="login">
+	</form>
+	
+	<br>
+
+	<form action='/createaccount'>
+		<input type="submit" value="I don't have an account" id="create_account">
+	</form>
+</div>
+
+{% endblock %}

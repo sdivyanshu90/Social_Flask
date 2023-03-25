@@ -1,0 +1,30 @@
+body, html {
+	margin: 0;
+    background-color: rgb(214, 173, 226);
+
+	text-align: center;
+    	font-family: 'Roboto', sans-serif;
+	font-size: 25px
+}
+
+table, th, td {
+	border: 3px solid #000000
+}
+
+input {
+	color: rgb(0, 0, 0);
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	margin: 10px 10px;
+	padding: 13px 40px;
+	cursor: pointer;
+	background-color: #adead4;
+	border: none;
+}
+input:hover {
+    background-color: #d6ee21;
+  }
+
+label {
+	font-size: 40px;
+}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>FoodStock: Home</title>
+{% endblock %}
+
+
+{% block body %}
+	<div class="posts">
+		{% if posts|length < 1 %}
+			<h1> Sorry! Looks like there are currently no posts!</h1>
+		{% else %}
+		<h1 style='text-align: center'> Posts </h1>
+		<table>
+			<tr>
+				<th>TITLE</th>
+				<th>CONTENT</th>
+				<th>DATE OF CREATION</th>
+				<th>CREATOR</th>
+				<th>POST DETAILS</th>
+			</tr>
+
+			{% for post in posts %}
+				<tr>
+					<td>{{ post.title }}</td>
+					<td>{{ post.content }}</td>
+					<td>{{ post.date_created.date() }}</td>
+					<td>{{ post.creator }}</td>
+					<td><a href='/view_post/{{id}}/{{password}}/{{post.id}}'>View Post</a></td>
+					
+				</tr>
+			{% endfor %}
+
+		</table>
+		{% endif %}
+		
+		<br>
+		<br>
+
+		 <form action="/home/{{id}}/{{password}}" method='POST'>
+			<input type="submit" value="Create a New Post!" name="new_post">
+		</form>
+	</div>
+{% endblock %}
